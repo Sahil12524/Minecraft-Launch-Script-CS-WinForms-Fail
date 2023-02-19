@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Microsoft.VisualBasic;
+using Microsoft.Win32;
 using Minecraft_Launch_Script.Helper;
 using Minecraft_Launch_Script.Views;
 using System;
@@ -134,6 +135,16 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new OldMethodView());
+        }
+
+        private void MainPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Interaction.Shell("cmd.exe /c del /f CurSystem32Ver.txt CurSysWOW64Ver.txt", AppWinStyle.Hide, true, 100);
+        }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
 
         private void btnPerformanceTweak_Click(object sender, EventArgs e)

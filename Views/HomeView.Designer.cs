@@ -67,8 +67,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblHackSysWOW64DllVersion = new System.Windows.Forms.Label();
+            this.lblHackSystem32DllVersion = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
@@ -564,8 +564,8 @@
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.label20, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.label19, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lblHackSysWOW64DllVersion, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lblHackSystem32DllVersion, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(18, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -576,27 +576,27 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(370, 123);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
-            // label20
+            // lblHackSysWOW64DllVersion
             // 
-            this.label20.AutoSize = true;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label20.Location = new System.Drawing.Point(240, 82);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(127, 41);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "10.0.18362.1110";
+            this.lblHackSysWOW64DllVersion.AutoSize = true;
+            this.lblHackSysWOW64DllVersion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblHackSysWOW64DllVersion.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblHackSysWOW64DllVersion.Location = new System.Drawing.Point(240, 82);
+            this.lblHackSysWOW64DllVersion.Name = "lblHackSysWOW64DllVersion";
+            this.lblHackSysWOW64DllVersion.Size = new System.Drawing.Size(127, 41);
+            this.lblHackSysWOW64DllVersion.TabIndex = 2;
+            this.lblHackSysWOW64DllVersion.Text = "10.0.18362.1110";
             // 
-            // label19
+            // lblHackSystem32DllVersion
             // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label19.Location = new System.Drawing.Point(240, 41);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(127, 41);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "10.0.18362.1110";
+            this.lblHackSystem32DllVersion.AutoSize = true;
+            this.lblHackSystem32DllVersion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblHackSystem32DllVersion.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblHackSystem32DllVersion.Location = new System.Drawing.Point(240, 41);
+            this.lblHackSystem32DllVersion.Name = "lblHackSystem32DllVersion";
+            this.lblHackSystem32DllVersion.Size = new System.Drawing.Size(127, 41);
+            this.lblHackSystem32DllVersion.TabIndex = 1;
+            this.lblHackSystem32DllVersion.Text = "10.0.18362.1110";
             // 
             // panel11
             // 
@@ -671,6 +671,8 @@
             this.DoubleBuffered = true;
             this.Name = "HomeView";
             this.Text = "HomeView";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeView_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -749,8 +751,8 @@
         private System.Windows.Forms.Label lblLauncherHealthStatus;
         private System.Windows.Forms.Label lblBackupReqStatus;
         private System.Windows.Forms.Label lblBypassStatus;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblHackSysWOW64DllVersion;
+        private System.Windows.Forms.Label lblHackSystem32DllVersion;
         private System.Windows.Forms.Label lblBackupSysWOW64DllVersion;
         private System.Windows.Forms.Label lblBackupSystem32DllVersion;
         private System.Windows.Forms.Label lblCurrentSystem32DllVersion;

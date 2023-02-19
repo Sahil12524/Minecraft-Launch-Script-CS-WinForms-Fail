@@ -202,6 +202,8 @@
             this.Text = "Minecraft Bedrock Edition Launcher";
             this.Activated += new System.EventHandler(this.MainPage_Activated);
             this.Deactivate += new System.EventHandler(this.MainPage_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPage_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainPage_FormClosed);
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
