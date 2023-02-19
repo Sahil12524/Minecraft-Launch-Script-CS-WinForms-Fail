@@ -13,7 +13,7 @@ namespace Minecraft_Launch_Script.Views
         public void conditChk()
         {
             string fileReader;
-            Interaction.Shell(@"cmd.exe /c wmic datafile where name=""C:\\Windows\\System32\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSystem32Ver.txt"" && wmic datafile where name=""C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSysWOW64Ver.txt"" ", AppWinStyle.Hide, true, 100);
+            Interaction.Shell(@"cmd.exe /c wmic datafile where name=""C:\\Windows\\System32\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSystem32Ver.txt"" && wmic datafile where name=""C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSysWOW64Ver.txt"" ", AppWinStyle.Hide, true, 200);
             // Threading.Thread.Sleep(1000)
             try
             {
