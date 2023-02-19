@@ -1,0 +1,11 @@
+E:\Users\sahil\source\repos\Minecraft Launch Script\bin\Release\Minecraft Launch Script.exe.config
+E:\Users\sahil\source\repos\Minecraft Launch Script\bin\Release\Minecraft Launch Script.exe
+E:\Users\sahil\source\repos\Minecraft Launch Script\bin\Release\Minecraft Launch Script.pdb
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.csproj.AssemblyReference.cache
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.csproj.SuggestedBindingRedirects.cache
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.MainPage.resources
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.Properties.Resources.resources
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.csproj.GenerateResource.cache
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.csproj.CoreCompileInputs.cache
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.exe
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.pdb

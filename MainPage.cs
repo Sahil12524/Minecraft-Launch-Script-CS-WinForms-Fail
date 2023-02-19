@@ -16,5 +16,10 @@ namespace Minecraft_Launch_Script
         {
             InitializeComponent();
         }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
