@@ -46,6 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "OldMethodView";
             this.Text = "OldMethodView";
             this.Load += new System.EventHandler(this.OldMethodView_Load);

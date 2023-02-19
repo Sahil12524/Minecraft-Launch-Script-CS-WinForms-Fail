@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnPerformanceTweak = new System.Windows.Forms.Button();
+            this.btnNewMethodBypass = new System.Windows.Forms.Button();
+            this.btnOldMethod = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnNewMethodBypass = new System.Windows.Forms.Button();
-            this.btnOldMethod = new System.Windows.Forms.Button();
-            this.btnPerformanceTweak = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,29 +57,34 @@
             this.panel1.Size = new System.Drawing.Size(236, 750);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // tableLayoutPanel2
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 30);
-            this.panel2.TabIndex = 0;
+            this.tableLayoutPanel2.AutoScroll = true;
+            this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.btnAbout, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 704);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(236, 46);
+            this.tableLayoutPanel2.TabIndex = 7;
             // 
-            // panel3
+            // btnAbout
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(236, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(851, 30);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(236, 30);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(851, 720);
-            this.panel4.TabIndex = 2;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnAbout.Location = new System.Drawing.Point(3, 3);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(230, 40);
+            this.btnAbout.TabIndex = 6;
+            this.btnAbout.Text = "About";
+            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -116,6 +121,19 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // btnPerformanceTweak
+            // 
+            this.btnPerformanceTweak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerformanceTweak.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnPerformanceTweak.Location = new System.Drawing.Point(3, 141);
+            this.btnPerformanceTweak.Name = "btnPerformanceTweak";
+            this.btnPerformanceTweak.Size = new System.Drawing.Size(230, 40);
+            this.btnPerformanceTweak.TabIndex = 5;
+            this.btnPerformanceTweak.Text = "Performance Tweak";
+            this.btnPerformanceTweak.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerformanceTweak.UseVisualStyleBackColor = true;
+            this.btnPerformanceTweak.Click += new System.EventHandler(this.btnPerformanceTweak_Click);
+            // 
             // btnNewMethodBypass
             // 
             this.btnNewMethodBypass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -144,47 +162,29 @@
             this.btnOldMethod.Visible = false;
             this.btnOldMethod.Click += new System.EventHandler(this.btnOldMethod_Click);
             // 
-            // btnPerformanceTweak
+            // panel2
             // 
-            this.btnPerformanceTweak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerformanceTweak.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btnPerformanceTweak.Location = new System.Drawing.Point(3, 141);
-            this.btnPerformanceTweak.Name = "btnPerformanceTweak";
-            this.btnPerformanceTweak.Size = new System.Drawing.Size(230, 40);
-            this.btnPerformanceTweak.TabIndex = 5;
-            this.btnPerformanceTweak.Text = "Performance Tweak";
-            this.btnPerformanceTweak.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerformanceTweak.UseVisualStyleBackColor = true;
-            this.btnPerformanceTweak.Click += new System.EventHandler(this.btnPerformanceTweak_Click);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(236, 30);
+            this.panel2.TabIndex = 0;
             // 
-            // btnAbout
+            // panel3
             // 
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btnAbout.Location = new System.Drawing.Point(3, 3);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(230, 40);
-            this.btnAbout.TabIndex = 6;
-            this.btnAbout.Text = "About";
-            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(236, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(851, 30);
+            this.panel3.TabIndex = 1;
             // 
-            // tableLayoutPanel2
+            // panel4
             // 
-            this.tableLayoutPanel2.AutoScroll = true;
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.btnAbout, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 704);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(236, 46);
-            this.tableLayoutPanel2.TabIndex = 7;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(236, 30);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(851, 720);
+            this.panel4.TabIndex = 2;
             // 
             // MainPage
             // 
@@ -199,11 +199,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPage";
             this.Text = "Minecraft Bedrock Edition Launcher";
+            this.Activated += new System.EventHandler(this.MainPage_Activated);
+            this.Deactivate += new System.EventHandler(this.MainPage_Deactivate);
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
