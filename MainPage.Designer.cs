@@ -75,6 +75,7 @@
             // 
             // btnAbout
             // 
+            this.btnAbout.AutoEllipsis = true;
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnAbout.Location = new System.Drawing.Point(3, 3);
             this.btnAbout.Name = "btnAbout";
@@ -109,6 +110,7 @@
             // 
             // btnHome
             // 
+            this.btnHome.AutoEllipsis = true;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnHome.Location = new System.Drawing.Point(3, 3);
             this.btnHome.Name = "btnHome";
@@ -121,6 +123,7 @@
             // 
             // btnPerformanceTweak
             // 
+            this.btnPerformanceTweak.AutoEllipsis = true;
             this.btnPerformanceTweak.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnPerformanceTweak.Location = new System.Drawing.Point(3, 141);
             this.btnPerformanceTweak.Name = "btnPerformanceTweak";
@@ -133,6 +136,7 @@
             // 
             // btnNewMethodBypass
             // 
+            this.btnNewMethodBypass.AutoEllipsis = true;
             this.btnNewMethodBypass.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnNewMethodBypass.Location = new System.Drawing.Point(3, 49);
             this.btnNewMethodBypass.Name = "btnNewMethodBypass";
@@ -145,6 +149,7 @@
             // 
             // btnOldMethod
             // 
+            this.btnOldMethod.AutoEllipsis = true;
             this.btnOldMethod.Enabled = false;
             this.btnOldMethod.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnOldMethod.Location = new System.Drawing.Point(3, 95);
@@ -178,6 +183,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(236, 30);
             this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(20);
             this.panel4.Size = new System.Drawing.Size(851, 720);
             this.panel4.TabIndex = 2;
             // 

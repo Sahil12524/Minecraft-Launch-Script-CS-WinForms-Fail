@@ -17,6 +17,17 @@ namespace Minecraft_Launch_Script
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, int[] attrValue, int attrSize);
         private bool isLightTheme;
         private bool taskRunning = true;
+        internal static class NativeWinAPI //Stops flickering
+        {
+            internal static readonly int GWL_EXSTYLE = -20;
+            internal static readonly int WS_EX_COMPOSITED = 0x02000000;
+
+            [DllImport("user32")]
+            internal static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+            [DllImport("user32")]
+            internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+        }
         public void colorTheme()
         {
             int lightmode = (int)Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
@@ -55,6 +66,10 @@ namespace Minecraft_Launch_Script
         public MainPage()
         {
             InitializeComponent();
+            this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
+            int style = NativeWinAPI.GetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE); //Stops flickering
+            style |= NativeWinAPI.WS_EX_COMPOSITED;
+            NativeWinAPI.SetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE, style);
             mainPage = this;
             buttonHome = btnHome;
             buttonAbout = btnAbout;
@@ -82,8 +97,6 @@ namespace Minecraft_Launch_Script
             GC.Collect();
             switchPanel(new HomeView());
             colorTheme();
-
-
             if (isLightTheme == true)
             {
                 ThemeHelper.LightTheme();
@@ -105,7 +118,6 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new HomeView());
-            colorTheme();
         }
 
         private void btnNewMethodBypass_Click(object sender, EventArgs e)
@@ -114,7 +126,6 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new NewMethodBypassView());
-            colorTheme();
         }
 
         private void btnOldMethod_Click(object sender, EventArgs e)
@@ -123,7 +134,6 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new OldMethodView());
-            colorTheme();
         }
 
         private void btnPerformanceTweak_Click(object sender, EventArgs e)
@@ -132,7 +142,6 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new PerformanceTweakView());
-            colorTheme();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
@@ -141,7 +150,6 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new AboutView());
-            colorTheme();
         }
 
         private void MainPage_Activated(object sender, EventArgs e)

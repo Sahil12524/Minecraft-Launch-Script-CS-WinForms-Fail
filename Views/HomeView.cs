@@ -5,14 +5,16 @@ namespace Minecraft_Launch_Script.Views
 {
     public partial class HomeView : Form
     {
+        public static HomeView homeView;
         public HomeView()
         {
             InitializeComponent();
+            homeView = this;
         }
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-
+            MainPage.mainPage.colorTheme();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using Minecraft_Launch_Script.Views;
 
 namespace Minecraft_Launch_Script.Helper
 {

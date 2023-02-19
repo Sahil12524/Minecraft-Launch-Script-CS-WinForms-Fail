@@ -12,7 +12,7 @@ namespace Minecraft_Launch_Script.Views
 
         private void AboutView_Load(object sender, EventArgs e)
         {
-
+            MainPage.mainPage.colorTheme();
         }
     }
 }
