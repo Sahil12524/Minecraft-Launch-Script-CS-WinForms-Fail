@@ -2,8 +2,6 @@
 using Minecraft_Launch_Script.Helper;
 using Minecraft_Launch_Script.Views;
 using System;
-using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +10,9 @@ namespace Minecraft_Launch_Script
 {
     public partial class MainPage : Form
     {
-        public static MainPage mainPage = new MainPage();
+        public static MainPage mainPage;
+        public Button buttonHome, buttonNewMethodBypass, buttonOldMethod, buttonPerformanceTweak, buttonAbout;
+        public Panel pnl1;
         [DllImport("DwmApi")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, int[] attrValue, int attrSize);
         private bool isLightTheme;
@@ -26,14 +26,14 @@ namespace Minecraft_Launch_Script
                 {
                     if (DwmSetWindowAttribute(Handle, 19, new[] { 1 }, 4) != 0)
                         DwmSetWindowAttribute(Handle, 20, new[] { 1 }, 4);
-                    //ThemeHelper.DarkThemeButtons();
+                    ThemeHelper.DarkThemeButtons();
                     isLightTheme = false;
                     ThemeHelper.DarkTheme();
                 }
                 else if (lightmode != 0) // its a light mode
                 {
                     DwmSetWindowAttribute(Handle, 20, new[] { 0 }, 4);
-                    //ThemeHelper.LightThemeButtons();
+                    ThemeHelper.LightThemeButtons();
                     isLightTheme = true;
                     ThemeHelper.LightTheme();
                 }
@@ -56,7 +56,12 @@ namespace Minecraft_Launch_Script
         {
             InitializeComponent();
             mainPage = this;
-            
+            buttonHome = btnHome;
+            buttonAbout = btnAbout;
+            buttonNewMethodBypass = btnNewMethodBypass;
+            buttonOldMethod = btnOldMethod;
+            buttonPerformanceTweak = btnPerformanceTweak;
+            pnl1 = panel1;
         }
 
         public void switchPanel(Form panel)
@@ -69,6 +74,7 @@ namespace Minecraft_Launch_Script
             panel.Show();
         }
 
+
         private void MainPage_Load(object sender, EventArgs e)
         {
             GC.Collect();
@@ -76,6 +82,8 @@ namespace Minecraft_Launch_Script
             GC.Collect();
             switchPanel(new HomeView());
             colorTheme();
+
+
             if (isLightTheme == true)
             {
                 ThemeHelper.LightTheme();
