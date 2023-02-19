@@ -20,7 +20,7 @@ I tested the script multiple times to verify that everything is running properly
 But what if you do not restore original DLL?
 Your windows apps will never going to update nor they Will download.
 Then I found something strange:
-Whenever windows gets updated, the DLL also gets updated after each update.
+Whenever windows gets updated, the DLL also gets updated after each updated.
 I figured that out and build a tracker logic, if the backup DLL needs to be updated or not.
 I used the UWP inspired UI style.
 Learned many thing during the development journey.
