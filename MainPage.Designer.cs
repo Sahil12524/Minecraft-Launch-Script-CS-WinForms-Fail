@@ -114,6 +114,7 @@
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnNewMethodBypass
             // 
@@ -126,6 +127,7 @@
             this.btnNewMethodBypass.Text = "New Method Bypass";
             this.btnNewMethodBypass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewMethodBypass.UseVisualStyleBackColor = true;
+            this.btnNewMethodBypass.Click += new System.EventHandler(this.btnNewMethodBypass_Click);
             // 
             // btnOldMethod
             // 
@@ -140,6 +142,7 @@
             this.btnOldMethod.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOldMethod.UseVisualStyleBackColor = true;
             this.btnOldMethod.Visible = false;
+            this.btnOldMethod.Click += new System.EventHandler(this.btnOldMethod_Click);
             // 
             // btnPerformanceTweak
             // 
@@ -152,6 +155,7 @@
             this.btnPerformanceTweak.Text = "Performance Tweak";
             this.btnPerformanceTweak.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerformanceTweak.UseVisualStyleBackColor = true;
+            this.btnPerformanceTweak.Click += new System.EventHandler(this.btnPerformanceTweak_Click);
             // 
             // btnAbout
             // 
@@ -164,6 +168,7 @@
             this.btnAbout.Text = "About";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // tableLayoutPanel2
             // 
