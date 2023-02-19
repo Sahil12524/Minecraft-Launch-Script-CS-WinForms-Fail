@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Minecraft Launch Script")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Minecraft Launch Script let's you play Minecraft Bedrock for free")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Sahil Bhandari")]
 [assembly: AssemblyProduct("Minecraft Launch Script")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]

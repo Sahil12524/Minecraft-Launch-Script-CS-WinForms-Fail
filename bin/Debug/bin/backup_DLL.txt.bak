@@ -1,0 +1,7 @@
+@echo off
+color 0a
+title Backup DLL
+set curdir=%~dp0
+echo %curdir%
+pushd "C:\Windows\System32\" && (xcopy /o /x Windows.ApplicationModel.Store.dll "%curdir%\dlls\Original Dlls Backup\System32")
+pushd "C:\Windows\sysWOW64\" && (xcopy /o /x Windows.ApplicationModel.Store.dll "%curdir%\dlls\Original Dlls Backup\sysWOW64")

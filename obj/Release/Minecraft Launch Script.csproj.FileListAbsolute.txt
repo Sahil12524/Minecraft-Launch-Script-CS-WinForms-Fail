@@ -9,3 +9,8 @@ E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch
 E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.csproj.CoreCompileInputs.cache
 E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.exe
 E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft Launch Script.pdb
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.Views.AboutView.resources
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.Views.HomeView.resources
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.Views.NewMethodBypassView.resources
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.Views.OldMethodView.resources
+E:\Users\sahil\source\repos\Minecraft Launch Script\obj\Release\Minecraft_Launch_Script.Views.PerformanceTweakView.resources
