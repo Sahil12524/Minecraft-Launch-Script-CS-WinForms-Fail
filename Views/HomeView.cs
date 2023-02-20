@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace Minecraft_Launch_Script.Views
 {
@@ -112,11 +112,13 @@ namespace Minecraft_Launch_Script.Views
         public HomeView()
         {
             InitializeComponent();
+            this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             homeView = this;
         }
 
         private void HomeView_Load(object sender, EventArgs e)
         {
+            this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             MainPage.mainPage.colorTheme();
             conditChk(); // <- Function!
             if (lblBackupReqStatus.Text == "Yes")

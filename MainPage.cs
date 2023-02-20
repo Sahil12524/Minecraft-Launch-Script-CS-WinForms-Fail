@@ -67,10 +67,10 @@ namespace Minecraft_Launch_Script
         public MainPage()
         {
             InitializeComponent();
-            this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             int style = NativeWinAPI.GetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE); //Stops flickering
             style |= NativeWinAPI.WS_EX_COMPOSITED;
             NativeWinAPI.SetWindowLong(this.Handle, NativeWinAPI.GWL_EXSTYLE, style);
+            this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             mainPage = this;
             buttonHome = btnHome;
             buttonAbout = btnAbout;
@@ -98,6 +98,7 @@ namespace Minecraft_Launch_Script
             GC.Collect();
             switchPanel(new HomeView());
             colorTheme();
+            this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             if (isLightTheme == true)
             {
                 ThemeHelper.LightTheme();
@@ -166,12 +167,18 @@ namespace Minecraft_Launch_Script
         private void MainPage_Activated(object sender, EventArgs e)
         {
             taskRunning = false;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
         }
 
         private void MainPage_Deactivate(object sender, EventArgs e)
         {
             taskRunning = true;
             updateTheme();
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
         }
     }
 }
