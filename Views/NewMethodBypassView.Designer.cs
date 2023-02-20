@@ -177,6 +177,7 @@
             this.btnStopBypass.TabIndex = 0;
             this.btnStopBypass.Text = "Stop Bypass";
             this.btnStopBypass.UseVisualStyleBackColor = true;
+            this.btnStopBypass.Click += new System.EventHandler(this.btnStopBypass_Click);
             // 
             // panel17
             // 
@@ -261,6 +262,7 @@
             this.btnQuickRestartPC.TabIndex = 0;
             this.btnQuickRestartPC.Text = "Quick Restart PC";
             this.btnQuickRestartPC.UseVisualStyleBackColor = true;
+            this.btnQuickRestartPC.Click += new System.EventHandler(this.btnQuickRestartPC_Click);
             // 
             // panel14
             // 
@@ -343,6 +345,7 @@
             this.btnRunMinecraft.TabIndex = 0;
             this.btnRunMinecraft.Text = "Run Minecraft";
             this.btnRunMinecraft.UseVisualStyleBackColor = true;
+            this.btnRunMinecraft.Click += new System.EventHandler(this.btnRunMinecraft_Click);
             // 
             // panel11
             // 
@@ -425,6 +428,7 @@
             this.btnLoadBypass.TabIndex = 0;
             this.btnLoadBypass.Text = "Load Bypass";
             this.btnLoadBypass.UseVisualStyleBackColor = true;
+            this.btnLoadBypass.Click += new System.EventHandler(this.btnLoadBypass_Click);
             // 
             // panel8
             // 
@@ -507,6 +511,7 @@
             this.btnBackupDLL.TabIndex = 0;
             this.btnBackupDLL.Text = "Backup Stock DLL";
             this.btnBackupDLL.UseVisualStyleBackColor = true;
+            this.btnBackupDLL.Click += new System.EventHandler(this.btnBackupDLL_Click);
             // 
             // panel4
             // 

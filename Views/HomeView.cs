@@ -9,11 +9,12 @@ namespace Minecraft_Launch_Script.Views
 {
     public partial class HomeView : Form
     {
+        public Label labelCurrentSystem32DLLVersion, labelCurrentSysWOW64DLLVersion, labelBackupSystem32DLLVersion, labelBackupSysWOW64DLLVersion, labelHackSystem32DllVersion, labelHackSysWOW64DLLVersion, labelBackupReqStatus, labelBypassStatus, labelLauncherHealthStatus;
         public static HomeView homeView;
         public void conditChk()
         {
             string fileReader;
-            Interaction.Shell(@"cmd.exe /c wmic datafile where name=""C:\\Windows\\System32\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSystem32Ver.txt"" && wmic datafile where name=""C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSysWOW64Ver.txt"" ", AppWinStyle.Hide, true, 200);
+            Interaction.Shell(@"cmd.exe /c wmic datafile where name=""C:\\Windows\\System32\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSystem32Ver.txt"" && wmic datafile where name=""C:\\Windows\\SysWOW64\\Windows.ApplicationModel.Store.dll"" Get Version /value > ""CurSysWOW64Ver.txt"" ", AppWinStyle.Hide, true, 400);
             // Threading.Thread.Sleep(1000)
             try
             {
@@ -114,10 +115,21 @@ namespace Minecraft_Launch_Script.Views
             InitializeComponent();
             this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             homeView = this;
+            labelCurrentSystem32DLLVersion = lblCurrentSystem32DllVersion;
+            labelCurrentSysWOW64DLLVersion = lblCurrentSysWOW64DllVersion;
+            labelBackupSystem32DLLVersion = lblBackupSystem32DllVersion;
+            labelBackupSysWOW64DLLVersion = lblBackupSysWOW64DllVersion;
+            labelHackSystem32DllVersion = lblHackSystem32DllVersion;
+            labelHackSysWOW64DLLVersion = lblHackSysWOW64DllVersion;
+            labelBackupReqStatus = lblBackupReqStatus;
+            labelBypassStatus = lblBypassStatus;
+            labelLauncherHealthStatus = lblLauncherHealthStatus;
+
         }
 
         private void HomeView_Load(object sender, EventArgs e)
         {
+            //label1.Text = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); //Testing Only
             this.SetStyle(System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true); //Stops flickering
             MainPage.mainPage.colorTheme();
             conditChk(); // <- Function!

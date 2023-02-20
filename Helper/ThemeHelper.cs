@@ -88,16 +88,16 @@ namespace Minecraft_Launch_Script.Helper
 
                 NewMethodBypassView.newMethodBypassView.richText1.BackColor = Color.FromArgb(18, 18, 18);
                 NewMethodBypassView.newMethodBypassView.richText1.ForeColor = SystemColors.Control;
-                
+
                 NewMethodBypassView.newMethodBypassView.richText2.BackColor = Color.FromArgb(18, 18, 18);
                 NewMethodBypassView.newMethodBypassView.richText2.ForeColor = SystemColors.Control;
-                
+
                 NewMethodBypassView.newMethodBypassView.richText3.BackColor = Color.FromArgb(18, 18, 18);
                 NewMethodBypassView.newMethodBypassView.richText3.ForeColor = SystemColors.Control;
-                
+
                 NewMethodBypassView.newMethodBypassView.richText4.BackColor = Color.FromArgb(18, 18, 18);
                 NewMethodBypassView.newMethodBypassView.richText4.ForeColor = SystemColors.Control;
-                
+
                 NewMethodBypassView.newMethodBypassView.richText5.BackColor = Color.FromArgb(18, 18, 18);
                 NewMethodBypassView.newMethodBypassView.richText5.ForeColor = SystemColors.Control;
 
