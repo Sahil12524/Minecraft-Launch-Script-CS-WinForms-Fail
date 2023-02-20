@@ -64,7 +64,7 @@ namespace Minecraft_Launch_Script.Helper
 
                 NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatStyle = FlatStyle.Flat;
                 NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.MouseOverBackColor = Color.Gray;
-                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.MouseDownBackColor = Color.LimeGreen;
                 NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.BorderColor = Color.Gray;
                 NewMethodBypassView.newMethodBypassView.buttonLoadBypass.ForeColor = SystemColors.Control;
 
@@ -82,7 +82,7 @@ namespace Minecraft_Launch_Script.Helper
 
                 NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatStyle = FlatStyle.Flat;
                 NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.MouseOverBackColor = Color.Gray;
-                NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.MouseDownBackColor = Color.Red;
                 NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.BorderColor = Color.Gray;
                 NewMethodBypassView.newMethodBypassView.buttonStopBypass.ForeColor = SystemColors.Control;
 
@@ -165,6 +165,54 @@ namespace Minecraft_Launch_Script.Helper
                 MainPage.mainPage.buttonAbout.FlatAppearance.MouseDownBackColor = Color.DarkGray;
                 MainPage.mainPage.buttonAbout.FlatAppearance.BorderColor = Color.Gray;
                 MainPage.mainPage.buttonAbout.ForeColor = SystemColors.ControlText;
+            }
+
+            if (NewMethodBypassView.newMethodBypassView != null)
+            {
+                NewMethodBypassView.newMethodBypassView.buttonBackupDLL.FlatStyle = FlatStyle.Flat;
+                NewMethodBypassView.newMethodBypassView.buttonBackupDLL.FlatAppearance.MouseOverBackColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonBackupDLL.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                NewMethodBypassView.newMethodBypassView.buttonBackupDLL.FlatAppearance.BorderColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonBackupDLL.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatStyle = FlatStyle.Flat;
+                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.MouseOverBackColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.MouseDownBackColor = Color.LimeGreen;
+                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.FlatAppearance.BorderColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonLoadBypass.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.buttonRunMinecraft.FlatStyle = FlatStyle.Flat;
+                NewMethodBypassView.newMethodBypassView.buttonRunMinecraft.FlatAppearance.MouseOverBackColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonRunMinecraft.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                NewMethodBypassView.newMethodBypassView.buttonRunMinecraft.FlatAppearance.BorderColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonRunMinecraft.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.buttonQuickRestartPC.FlatStyle = FlatStyle.Flat;
+                NewMethodBypassView.newMethodBypassView.buttonQuickRestartPC.FlatAppearance.MouseOverBackColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonQuickRestartPC.FlatAppearance.MouseDownBackColor = Color.DarkGray;
+                NewMethodBypassView.newMethodBypassView.buttonQuickRestartPC.FlatAppearance.BorderColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonQuickRestartPC.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatStyle = FlatStyle.Flat;
+                NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.MouseOverBackColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.MouseDownBackColor = Color.LimeGreen;
+                NewMethodBypassView.newMethodBypassView.buttonStopBypass.FlatAppearance.BorderColor = Color.Gray;
+                NewMethodBypassView.newMethodBypassView.buttonStopBypass.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.richText1.BackColor = SystemColors.Control;
+                NewMethodBypassView.newMethodBypassView.richText1.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.richText2.BackColor = SystemColors.Control;
+                NewMethodBypassView.newMethodBypassView.richText2.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.richText3.BackColor = SystemColors.Control;
+                NewMethodBypassView.newMethodBypassView.richText3.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.richText4.BackColor = SystemColors.Control;
+                NewMethodBypassView.newMethodBypassView.richText4.ForeColor = SystemColors.ControlText;
+
+                NewMethodBypassView.newMethodBypassView.richText5.BackColor = SystemColors.Control;
+                NewMethodBypassView.newMethodBypassView.richText5.ForeColor = SystemColors.ControlText;
             }
 
             if (OldMethodView.oldMethodView != null)
