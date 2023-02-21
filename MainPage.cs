@@ -64,6 +64,9 @@ namespace Minecraft_Launch_Script
                 colorTheme();
             }
         }
+        string fileReader = Interaction.Environ("USERPROFILE") + @"\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\minecraftpe\options.txt";
+        string root = @"C:\";
+        dynamic appDefLoc = System.IO.Directory.GetParent(Application.ExecutablePath);
         public MainPage()
         {
             InitializeComponent();
@@ -128,6 +131,55 @@ namespace Minecraft_Launch_Script
             GC.WaitForPendingFinalizers();
             GC.Collect();
             switchPanel(new NewMethodBypassView());
+            Interaction.Shell("cmd.exe /c del /f CurSystem32Ver.txt CurSysWOW64Ver.txt", AppWinStyle.Hide, true, 100);
+            // Threading.Thread.Sleep(1000)
+
+            if (HomeView.homeView.labelBackupReqStatus.Text == "Yes" | HomeView.homeView.labelBackupReqStatus.Text == "N/A" | HomeView.homeView.labelBackupSystem32DLLVersion.Text == "Backup not found" & HomeView.homeView.labelBackupSysWOW64DLLVersion.Text == "Backup not found")
+            {
+                NewMethodBypassView.newMethodBypassView.pnl3.Show();
+                NewMethodBypassView.newMethodBypassView.pnl6.Hide();
+                NewMethodBypassView.newMethodBypassView.pnl9.Hide();
+                NewMethodBypassView.newMethodBypassView.pnl12.Hide();
+                NewMethodBypassView.newMethodBypassView.pnl15.Hide();
+            }
+            else if (HomeView.homeView.labelBackupReqStatus.Text == "No")
+            {
+                NewMethodBypassView.newMethodBypassView.pnl3.Hide();
+                NewMethodBypassView.newMethodBypassView.pnl6.Show();
+                NewMethodBypassView.newMethodBypassView.pnl9.Show();
+                NewMethodBypassView.newMethodBypassView.pnl12.Show();
+                NewMethodBypassView.newMethodBypassView.pnl15.Show();
+            }
+
+            if (HomeView.homeView.labelBypassStatus.Text == "True")
+            {
+                taskRunning = true;
+                taskRunning = false;
+                NewMethodBypassView.newMethodBypassView.pnl15.Show();
+                NewMethodBypassView.newMethodBypassView.pnl6.Hide();
+                NewMethodBypassView.newMethodBypassView.pnl9.Show();
+                NewMethodBypassView.newMethodBypassView.pnl12.Show();
+                taskRunning = true;
+                taskRunning = false;
+            }
+            else if (HomeView.homeView.labelBypassStatus.Text == "False" | HomeView.homeView.labelBypassStatus.Text == "N/A")
+            {
+                taskRunning = true;
+                taskRunning = false;
+                NewMethodBypassView.newMethodBypassView.pnl15.Hide();
+                taskRunning = true;
+                taskRunning = false;
+            }
+            if (HomeView.homeView.labelBypassStatus.Text == "False" & HomeView.homeView.labelBackupReqStatus.Text == "No")
+            {
+                taskRunning = true;
+                taskRunning = false;
+                NewMethodBypassView.newMethodBypassView.pnl6.Show();
+                NewMethodBypassView.newMethodBypassView.pnl9.Hide();
+                NewMethodBypassView.newMethodBypassView.pnl12.Hide();
+                taskRunning = true;
+                taskRunning = false;
+            }
         }
 
         private void btnOldMethod_Click(object sender, EventArgs e)
